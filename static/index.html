@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <!-- js pur -->
+        <script src='/static/ajax.js'></script>
+        <script src='/static/mainDeLaData.js'></script>
+        <!-- avec d3 -->
+        <script src='/static/d3.js'></script>
+        <script src='/static/mainDuStatique.js'></script>
+        <!-- du style -->
+        <link rel='stylesheet' href='/static/style.css'></link>
+    </head>
+    <body>
+
+        <h1>LA DATA</h1>
+
+        <div id="le-div-de-la-data">
+        </div>
+
+        <form action='/data' method='post'>
+        <!-- le formulaire sera automatiquement envoye,
+            en x-www-form-urlencoded par defaut -->
+            <label for='nom'>nom:</label>
+            <input name='nom'>
+            <label for='prenom'>prenom:</label>
+            <input name='prenom'>
+            <label for='profession'>profession:</label>
+            <input name='profession'>
+            <input type='submit' value='postLaData'>
+        </form>
+
+        <hr/>
+
+        <div id="le-div-des-liens"></div>
+
+    </body>
+</html>
