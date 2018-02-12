@@ -1,1 +1,1 @@
-<a href='u-press.it:8083'>la page web</a>
+[la page web]('u-press.it:8083')
