@@ -9,6 +9,7 @@ const bodyParser = require('body-parser');
 var app = express();
 
 // express middleware to parse the body of http requests:
+// (according to MIME type)
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
@@ -41,7 +42,7 @@ app.get('/data', (req, res) => {
  * le client naviguera a la reponse.
  *
  * Si tu voulais juste recuperer de la data a la demande et en faire qqc: 
- *      <form onsubmit='ajax().post('url').then(faireQqc)'>
+ *      <form onsubmit="ajax().post('url').then(data => faireQqc(data))">
  */
 app.post('/data', (req, res) => {
     data.push(req.body);
@@ -49,7 +50,7 @@ app.post('/data', (req, res) => {
 });
 
 // <-- ajax.get
-var ls = fs.readdirSync('static'); // only called once
+var ls = fs.readdirSync('static'); // sync but only called once
 app.get('/ls', (req, res) => {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify(ls));

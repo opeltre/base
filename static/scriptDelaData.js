@@ -7,11 +7,11 @@ function affichageDeLaData (data) {
         .forEach( d => {
             document
                 .getElementById('le-div-de-la-data')
-                .appendChild(vizDuDatum(d));
+                .appendChild(domNodeDuDatum(d));
         });
 }
 
-function vizDuDatum(d) {
+function domNodeDuDatum(d) {
     var node = document.createElement('div');
     node.style.border = '1px solid black';
     node.style.margin = '2px';
