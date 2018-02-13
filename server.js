@@ -35,14 +35,21 @@ app.get('/data', (req, res) => {
 });
 
 // <--  ajax.post
+/* Avec un post automatique via:
+ *      <form action='url'>,
+ * reponds par une redirection pour forcer le rafraichissement de la page,
+ * le client naviguera a la reponse.
+ *
+ * Si tu voulais juste recuperer de la data a la demande et en faire qqc: 
+ *      <form onsubmit='ajax().post('url').then(faireQqc)'>
+ */
 app.post('/data', (req, res) => {
     data.push(req.body);
-    res.redirect('/');
+    res.redirect('/'); 
 });
 
 // <-- ajax.get
 var ls = fs.readdirSync('static'); // only called once
-console.log(ls);
 app.get('/ls', (req, res) => {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify(ls));
