@@ -7,11 +7,12 @@
     </head>
     <body>
 
+        <em class="commentaire">Un formulaire avec redirection automatique</em>
+        
         <h1>LA DATA</h1>
 
         <div id="le-div-de-la-data">
         </div>
-
         <form action='/data' method='post'>
         <!-- le formulaire sera automatiquement envoye,
         en x-www-form-urlencoded par defaut
@@ -27,8 +28,10 @@
         </form>
 
         <hr/>
+        
         <div id="addition">
-            <h2> L'ADDITION </h2>
+            <em class="commentaire">Le full control du js pur</em> 
+            <h1> L'ADDITION </h1>
             <input name="a"> +
             <input name="b">
             <button onclick="additionne()"> = </button>
@@ -36,8 +39,10 @@
         </div>
 
         <hr/>
-
-        <div id="le-div-des-liens"></div>
+        <em class="commentaire">La source affich&eacute;e avec un peu de d3</em> 
+        <h3> LE STATIQUE </h3>
+        <div id="le-div-des-liens">
+        </div>
 
         <!-- js pur & form action -->
         <script src='/static/scriptDeLaData.js'></script>

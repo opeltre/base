@@ -4,6 +4,11 @@
     margin-left: 40px;
 }
 
+.commentaire {
+    display: block;
+    text-align: right;
+}
+
 #le-div-des-liens h3 {
     background-color: black;
     color: white;
