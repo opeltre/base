@@ -27,11 +27,22 @@
         </form>
 
         <hr/>
+        <div id="addition">
+            <h2> L'ADDITION </h2>
+            <input name="a"> +
+            <input name="b">
+            <button onclick="additionne()"> = </button>
+            <span name="c">0</span>
+        </div>
+
+        <hr/>
 
         <div id="le-div-des-liens"></div>
 
-        <!-- js pur -->
+        <!-- js pur & form action -->
         <script src='/static/scriptDeLaData.js'></script>
+        <!-- js pur & ajax custom -->
+        <script src='/static/scriptDeLAddition.js'></script>
         <!-- avec d3 -->
         <script src='/static/scriptDuStatique.js'></script>
     </body>
